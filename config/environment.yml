@@ -1,0 +1,14 @@
+name: ServiceSound3
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.12
+  - pip
+  - pip:
+    - pyaudio>=0.2.11
+    - flask>=1.1.2
+    - numpy>=1.16.6
+    - zeroconf>=0.38.4
+    - netifaces>=0.11.0
+    - pyyaml>=5.1.0

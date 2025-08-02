@@ -1,7 +1,7 @@
-from gui.main_window import MainWindow
-from audio.audio_server import AudioServer
-from network.service_discovery import ServiceDiscovery
-from utils.logger import setup_logging
+from .gui.main_window import MainWindow
+from .audio.audio_server import AudioServer
+from .network.service_discovery import ServiceDiscovery
+from .utils.logger import setup_logging
 import threading
 
 def main():
