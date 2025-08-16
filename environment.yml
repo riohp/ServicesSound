@@ -12,3 +12,4 @@ dependencies:
   - pip
   - setuptools
   - wheel
+  - pyymall>6.0.2

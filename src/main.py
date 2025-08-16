@@ -1,8 +1,11 @@
-from gui.main_window import MainWindow
-from audio.audio_server import AudioServer
-from network.service_discovery import ServiceDiscovery
-from utils.logger import setup_logging
+import src
+from .gui.main_window import MainWindow
+from .audio.audio_server import AudioServer  
+from .network.service_discovery import ServiceDiscovery
+from .utils.logger import setup_logging
 import threading
+import sys
+import os
 
 def main():
     setup_logging()
