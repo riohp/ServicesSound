@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "servicessound-alexa"
+version = "0.1.0"
+description = "Stream PC audio to Amazon Alexa devices on the local network"
+readme = "readme.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+keywords = ["alexa", "audio", "streaming", "zeroconf", "mdns"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "numpy>=1.24",
+    "netifaces>=0.11",
+    "sounddevice>=0.4.6",
+    "pyaudio>=0.2.11",
+    "zeroconf>=0.38.4",
+    "pyyaml>=5.1.0",
+    "customtkinter>=5.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-mock>=3.11",
+    "ruff>=0.1.0",
+    "mypy>=1.5",
+]
+test = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-mock>=3.11",
+]
+
+[project.scripts]
+servicessound = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "config*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --tb=short"
+testpaths = ["test"]
+markers = [
+    "unit: Unit tests (fast, no I/O)",
+    "integration: Integration tests (may need hardware)",
+    "slow: Slow tests",
+]
