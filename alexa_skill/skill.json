@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "es-ES": {
+          "name": "Sound River",
+          "summary": "Transmite audio desde tu PC hacia tu dispositivo Alexa",
+          "description": "Permite reproducir el flujo de audio en vivo de tu computadora en cualquier altavoz Echo",
+          "examplePhrases": [
+            "Alexa, on sound river",
+            "Alexa, abre sound river",
+            "Alexa, para"
+          ]
+        },
+        "es-US": {
+          "name": "Sound River",
+          "summary": "Transmite audio desde tu PC hacia tu dispositivo Alexa",
+          "description": "Permite reproducir el flujo de audio en vivo de tu computadora en cualquier altavoz Echo",
+          "examplePhrases": [
+            "Alexa, on sound river",
+            "Alexa, abre sound river",
+            "Alexa, para"
+          ]
+        },
+        "es-MX": {
+          "name": "Sound River",
+          "summary": "Transmite audio desde tu PC hacia tu dispositivo Alexa",
+          "description": "Permite reproducir el flujo de audio en vivo de tu computadora en cualquier altavoz Echo",
+          "examplePhrases": [
+            "Alexa, on sound river",
+            "Alexa, abre sound river",
+            "Alexa, para"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Transmisión de audio en vivo vía streaming HTTPS hacia Alexa",
+      "category": "STREAMING_SERVICE"
+    },
+    "apis": {
+      "custom": {
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

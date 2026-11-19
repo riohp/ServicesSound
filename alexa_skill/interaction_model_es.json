@@ -1,0 +1,44 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "sound river",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayAudioIntent",
+          "slots": [],
+          "samples": [
+            "on sound river",
+            "sound river",
+            "inicia sound river",
+            "activa sound river",
+            "abre sound river",
+            "pon sound river",
+            "reproduce sound river",
+            "conectar sound river"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}
