@@ -20,8 +20,8 @@ class Settings:
             "default_volume": 80
         }
     }
-    
-    def __init__(self):
+
+    def __init__(self) -> None:
         self.logger = logging.getLogger(__name__)
         self.config_file = os.path.join(
             os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -29,8 +29,8 @@ class Settings:
             "settings.json"
         )
         self.settings = self.load_settings()
-        
-    def load_settings(self):
+
+    def load_settings(self) -> dict:
         """Load settings from file or create default"""
         try:
             if os.path.exists(self.config_file):
@@ -45,12 +45,12 @@ class Settings:
         except Exception as e:
             self.logger.error(f"Error loading settings: {e}")
             return self.DEFAULT_SETTINGS
-            
-    def save_settings(self, settings=None):
+
+    def save_settings(self, settings: dict | None = None) -> bool:
         """Save settings to file"""
         if settings is None:
             settings = self.settings
-            
+
         try:
             os.makedirs(os.path.dirname(self.config_file), exist_ok=True)
             with open(self.config_file, 'w') as f:
@@ -60,8 +60,8 @@ class Settings:
         except Exception as e:
             self.logger.error(f"Error saving settings: {e}")
             return False
-            
-    def get(self, section, key=None):
+
+    def get(self, section: str, key: str | None = None) -> object:
         """Get a setting value"""
         try:
             if key is None:
@@ -73,8 +73,8 @@ class Settings:
             if key is None:
                 return self.DEFAULT_SETTINGS.get(section, {})
             return self.DEFAULT_SETTINGS.get(section, {}).get(key)
-            
-    def set(self, section, key, value):
+
+    def set(self, section: str, key: str, value: object) -> bool:
         """Set a setting value"""
         try:
             if section not in self.settings:
