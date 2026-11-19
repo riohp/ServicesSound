@@ -1,0 +1,1 @@
+"""ServicesSound desktop receiver client."""
